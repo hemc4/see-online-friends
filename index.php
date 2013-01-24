@@ -250,7 +250,7 @@ $app_name = idx($app_info, 'name', '');
 
       <div class="">
         <h3>Your Online friends</h3>
-        <ul class="friends">
+        <ul class="">
           <?php
             foreach ($friends as $friend) {
               // Extract the pieces of info we need from the requests above
