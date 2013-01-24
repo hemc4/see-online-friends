@@ -61,7 +61,7 @@ if ($user_id) {
 
   // This fetches 4 of your friends.
   //$friends = idx($facebook->api('/me/friends?limit=4'), 'data', array());
- $friends== $facebook->api(array(
+ $friends= $facebook->api(array(
     'method' => 'fql.query',
     'query' => 'SELECT uid, name FROM user WHERE
   online_presence IN ("active", "idle")
