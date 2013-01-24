@@ -34,7 +34,7 @@ if ($user_id) {
   // This fetches some things that you like . 'limit=*" only returns * values.
   // To see the format of the data you are retrieving, use the "Graph API
   // Explorer" which is at https://developers.facebook.com/tools/explorer/
-  $likes = idx($facebook->api('/me/likes?limit=4'), 'data', array());
+  //$likes = idx($facebook->api('/me/likes?limit=4'), 'data', array());
 
   // This fetches 4 of your friends.
   //$friends = idx($facebook->api('/me/friends?limit=4'), 'data', array());
@@ -46,12 +46,8 @@ if ($user_id) {
     SELECT uid2 FROM friend WHERE uid1=me()
   )'
   ));
- print_r($friends);//die;
-  // And this returns 16 of your photos.
-  $photos = idx($facebook->api('/me/photos?limit=16'), 'data', array());
-
-  // Here is an example of a FQL call that fetches all of your friends that are
-  // using this app
+ //print_r($friends);//die;
+  
   $app_using_friends = $facebook->api(array(
     'method' => 'fql.query',
     'query' => 'SELECT uid, name FROM user WHERE uid IN(SELECT uid2 FROM friend WHERE uid1 = me()) AND is_app_user = 1'
@@ -235,8 +231,14 @@ $app_name = idx($app_info, 'name', '');
 
     <section id="get-started">
       <p>Turn Off the chat ?</p><br/>
-      <p>Don't worry still you can see who is online </p>
-      <p>login to see</p>
+      <p>Don't worry still you can see who is online 
+      <?php
+      if (!$user_id) {
+    ?>
+          Login to see who is online.
+      <?php }?>
+      </p>
+      
     </section>
 
     <?php
@@ -246,7 +248,7 @@ $app_name = idx($app_info, 'name', '');
     <section id="samples" class="clearfix">
       
 
-      <div class="list">
+      <div class="">
         <h3>Your Online friends</h3>
         <ul class="friends">
           <?php
