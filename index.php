@@ -69,6 +69,7 @@ if ($user_id) {
     SELECT uid2 FROM friend WHERE uid1=me()
   )'
   ));
+ print_r($friends);//die;
   // And this returns 16 of your photos.
   $photos = idx($facebook->api('/me/photos?limit=16'), 'data', array());
 
