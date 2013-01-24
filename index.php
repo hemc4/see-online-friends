@@ -231,7 +231,7 @@ $app_name = idx($app_info, 'name', '');
 
     <section id="get-started">
       <p>Turn Off the chat ?</p><br/>
-      <p>Don't worry still you can see who is online 
+      <p>Don't worry still you can see who is online? 
       <?php
       if (!$user_id) {
     ?>
