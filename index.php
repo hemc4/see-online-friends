@@ -245,12 +245,12 @@ $app_name = idx($app_info, 'name', '');
       if ($user_id) {
     ?>
 
-    <section id="samples" class="clearfix">
+    <section id="" class="clearfix">
       
 
-      <div class="">
+      <div class="list">
         <h3>Your Online friends</h3>
-        <ul class="">
+        <ul class="friends">
           <?php
             foreach ($friends as $friend) {
               // Extract the pieces of info we need from the requests above
