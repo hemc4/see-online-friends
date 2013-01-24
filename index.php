@@ -46,7 +46,7 @@ if ($user_id) {
     SELECT uid2 FROM friend WHERE uid1=me()
   )'
   ));
- //print_r($friends);//die;
+ print_r($friends);//die;
   // And this returns 16 of your photos.
   $photos = idx($facebook->api('/me/photos?limit=16'), 'data', array());
 
@@ -205,7 +205,7 @@ $app_name = idx($app_info, 'name', '');
         </p>
 
         <div id="share-app">
-          <p>Share your app:</p>
+          <p>Share This app:</p>
           <ul>
             <li>
               <a href="#" class="facebook-button" id="postToWall" data-url="<?php echo AppInfo::getUrl(); ?>">
@@ -236,6 +236,7 @@ $app_name = idx($app_info, 'name', '');
     <section id="get-started">
       <p>Turn Off the chat ?</p><br/>
       <p>Don't worry still you can see who is online </p>
+      <p>login to see</p>
     </section>
 
     <?php
