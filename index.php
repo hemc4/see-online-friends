@@ -245,7 +245,7 @@ $app_name = idx($app_info, 'name', '');
       if ($user_id) {
     ?>
 
-    <section id="" class="clearfix">
+    <section id="samples" class="clearfix">
       
 
       <div class="list">
