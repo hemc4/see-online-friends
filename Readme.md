@@ -1,8 +1,8 @@
-Facebook app:- See online friends while you chat is turned off 
+Facebook app:- I want to keep off my chat but still want to check who else is online.
 =================================
 
 This is simple require online_presence permmision to fetch the list of your online friend. There is not need to turn 
-your chant on.
+your chat on.
 
 Run locally
 -----------
